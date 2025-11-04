@@ -4,137 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Colaborativo - Inicio</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8fafc;
-            color: #334155;
-            line-height: 1.6;
-        }
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2563eb;
-        }
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        .nav-link {
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: #2563eb;
-        }
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #f59e0b;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        .btn:hover {
-            background: #d97706;
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">ProyectoSGS</div>
+            <h1 class="nav-logo">ProyectoSGS</h1>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
                 <li><a href="login.html" class="nav-link">Login</a></li>
                 <li><a href="profile.html" class="nav-link">Perfil</a></li>
             </ul>
         </div>
     </nav>
 
-    <section class="hero">
-        <h2>Proyecto Colaborativo</h2>
-        <p>Simulación de trabajo en equipo con Git y GitHub</p>
-        <a href="login.html" class="btn">Comenzar Ahora</a>
-    </section>
-        <!-- Añade esta sección después del hero -->
-    <section class="features">
-        <h3>Funcionalidades Implementadas</h3>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h4>🔐 Sistema de Login Seguro</h4>
-                <p>Autenticación con validación en tiempo real y feedback visual</p>
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido al Proyecto Colaborativo</h2>
+                <p>Simulación de trabajo en equipo usando Git y GitHub</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary">Comenzar</a>
+                    <a href="#features" class="btn btn-secondary">Saber más</a>
+                </div>
             </div>
-            <div class="feature-card">
-                <h4>👤 Perfil Interactivo</h4>
-                <p>Gestión completa de perfil de usuario con datos dinámicos</p>
-            </div>
-            <div class="feature-card">
-                <h4>🎨 Diseño Moderno</h4>
-                <p>Interfaz responsive con gradientes y animaciones fluidas</p>
-            </div>
-            <div class="feature-card">
-                <h4>🔄 Control de Versiones</h4>
-                <p>Simulación completa de flujo Git con múltiples ramas</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="features" style="background: #f1f5f9; padding: 4rem 2rem; border-radius: 20px; margin: 2rem;">
-        <h3>🚀 Flujo de Trabajo Simulado</h3>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h4>1. Rama Feature/Login</h4>
-                <p>3 commits implementando sistema de autenticación</p>
+        <section id="features" class="features">
+            <h3>Funcionalidades Implementadas</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>🔐 Sistema de Login</h4>
+                    <p>Formulario de autenticación con validación</p>
+                </div>
+                <div class="feature-card">
+                    <h4>👤 Perfil de Usuario</h4>
+                    <p>Gestión de información personal del usuario</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎨 Diseño Responsive</h4>
+                    <p>Interfaz adaptable a todos los dispositivos</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <h4>2. Rama Feature/Profile</h4>
-                <p>3 commits creando perfil de usuario interactivo</p>
+        </section>
+
+        <section class="features" style="background: #f1f5f9; padding: 4rem 2rem; border-radius: 20px; margin: 2rem auto; max-width: 1200px;">
+            <h3>🚀 Flujo de Trabajo Simulado</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>1. Rama Feature/Login</h4>
+                    <p>3 commits implementando sistema de autenticación</p>
+                </div>
+                <div class="feature-card">
+                    <h4>2. Rama Feature/Profile</h4>
+                    <p>3 commits creando perfil de usuario interactivo</p>
+                </div>
+                <div class="feature-card">
+                    <h4>3. Rama Feature/Main-Page</h4>
+                    <p>3 commits desarrollando página principal</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <h4>3. Rama Feature/Main-Page</h4>
-                <p>3 commits desarrollando página principal</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Proyecto Colaborativo. Desarrollado por Angie Hernandez</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
