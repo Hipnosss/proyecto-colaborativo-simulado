@@ -1,7 +1,7 @@
 # Evidencias de Trabajo Colaborativo Simulado
 
 ## 📊 Resumen del Proyecto
-- **Repositorio:** [Enlace a tu repositorio]
+- **Repositorio:** https://github.com/Hipnosss/proyecto-colaborativo-simulado
 - **Estudiante:** Angie Gabriela Hernandez Martinez  
 - **Curso:** SGS - Sistemas de Gestión
 
