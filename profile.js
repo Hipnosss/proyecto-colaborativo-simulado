@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
         course: "Sistemas de Gestión (SGS)",
         status: "En progreso",
         specialty: "Desarrollo de Software",
-        skills: ["HTML5", "CSS3", "JavaScript", "Git", "GitHub", "Responsive Design", "Bootstrap"],
+        skills: ["HTML5", "CSS3", "JavaScript", "Git", "GitHub", "Responsive Design"],
         goals: [
             "Convertirme en desarrolladora Full Stack",
             "Dominar Git y trabajo colaborativo", 
             "Contribuir a proyectos open source",
-            "Especializarme en desarrollo web moderno",
-            "Participar en hackathons y proyectos reales"
+            "Especializarme en desarrollo web moderno"
         ]
     };
 
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updateProfile(data) {
         // Actualizar información básica
-        document.querySelector('.profile-name').textContent = data.name;
+        document.querySelector('.profile-info h1').textContent = data.name;
         document.querySelector('.profile-title').textContent = data.title;
         
         // Actualizar habilidades
@@ -38,46 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
             skillTag.textContent = skill;
             skillsContainer.appendChild(skillTag);
         });
-        
-        // Actualizar objetivos
-        const goalsList = document.querySelector('.profile-section:last-child ul');
-        goalsList.innerHTML = '';
-        data.goals.forEach(goal => {
-            const li = document.createElement('li');
-            li.textContent = goal;
-            goalsList.appendChild(li);
-        });
     }
     
     function addInteractiveEffects() {
-        // Efecto de contador para stats (simulado)
-        const stats = document.querySelectorAll('.stat-number');
-        stats.forEach(stat => {
-            const target = parseInt(stat.textContent);
-            let current = 0;
-            const increment = target / 50;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                stat.textContent = Math.floor(current);
-            }, 30);
-        });
-        
         // Tooltip para habilidades
         const skillTags = document.querySelectorAll('.skill-tag');
         skillTags.forEach(tag => {
             tag.addEventListener('mouseenter', function() {
                 this.style.transform = 'scale(1.1)';
-                this.style.boxShadow = '0 6px 12px rgba(102, 126, 234, 0.4)';
             });
             
             tag.addEventListener('mouseleave', function() {
                 this.style.transform = 'scale(1)';
-                this.style.boxShadow = '0 4px 8px rgba(102, 126, 234, 0.3)';
             });
         });
         
@@ -99,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
             z-index: 1000;
-            animation: slideIn 0.5s ease;
         `;
         
         welcomeMsg.innerHTML = `
@@ -113,24 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Auto-remover después de 4 segundos
         setTimeout(() => {
-            welcomeMsg.style.animation = 'slideOut 0.5s ease';
-            setTimeout(() => {
-                welcomeMsg.remove();
-            }, 500);
+            welcomeMsg.remove();
         }, 4000);
     }
-    
-    // Añadir estilos para animaciones
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-    `;
-    document.head.appendChild(style);
 });
