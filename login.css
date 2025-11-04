@@ -1,60 +1,75 @@
-/* login.css - Estilos mejorados para login */
+/* login.css - Estilos específicos para login */
 .login-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    width: 100%;
-    max-width: 400px;
-    color: white;
 }
 
-.login-container h2 {
+.login-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--border);
+}
+
+.login-card h2 {
     text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-size: 2rem;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.login-form {
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
 }
 
-label {
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
+    color: var(--text-dark);
     font-weight: 500;
 }
 
-input {
+.form-group input {
     width: 100%;
     padding: 0.75rem;
-    border: none;
+    border: 2px solid var(--border);
     border-radius: 8px;
     font-size: 1rem;
-    background: rgba(255,255,255,0.9);
-}
-
-input:focus {
-    outline: none;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
-}
-
-button {
-    width: 100%;
-    padding: 0.75rem;
-    background: #f59e0b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-button:hover {
-    background: #d97706;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.login-footer {
+    text-align: center;
+    color: var(--text-light);
+}
+
+.register-link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
 }
