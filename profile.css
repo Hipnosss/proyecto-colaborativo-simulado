@@ -1,4 +1,4 @@
-/* profile.css - Estilos mejorados para el perfil */
+/* profile.css - Estilos específicos para perfil */
 .profile-container {
     max-width: 900px;
     margin: 2rem auto;
@@ -17,43 +17,23 @@
     overflow: hidden;
 }
 
-.profile-header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    animation: float 20s linear infinite;
-}
-
-@keyframes float {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-50px, -50px) rotate(360deg); }
-}
-
 .profile-avatar {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background: rgba(255,255,255,0.2);
     margin: 0 auto 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     font-weight: bold;
     border: 4px solid rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-    position: relative;
-    z-index: 2;
 }
 
-.profile-name {
-    font-size: 2.2rem;
+.profile-info h1 {
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
@@ -64,6 +44,10 @@
     opacity: 0.9;
 }
 
+.profile-location {
+    opacity: 0.8;
+}
+
 .profile-section {
     background: white;
     padding: 2rem;
@@ -71,20 +55,29 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     margin-bottom: 1.5rem;
     border-left: 4px solid #667eea;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .profile-section h3 {
     color: #1e40af;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 0.5rem;
     font-size: 1.3rem;
+}
+
+.info-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.status-active {
+    color: var(--success);
+    font-weight: 600;
 }
 
 .skills-container {
@@ -96,30 +89,24 @@
 .skill-tag {
     background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.skill-tag:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
-}
-
-.profile-section ul {
+.goals-list {
     list-style: none;
     padding-left: 0;
 }
 
-.profile-section li {
+.goals-list li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
 }
 
-.profile-section li::before {
+.goals-list li::before {
     content: '🎯';
     position: absolute;
     left: 0;
