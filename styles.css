@@ -26,6 +26,13 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
 }
 
 /* Navbar mejorada */
@@ -35,7 +42,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -67,7 +73,6 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
 .nav-link:hover {
@@ -80,56 +85,29 @@ body {
     background: rgba(37, 99, 235, 0.1);
 }
 
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 1rem;
-    right: 1rem;
-    height: 2px;
-    background: var(--primary);
-}
-
-/* Hero section mejorada */
+/* Hero section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 6rem 2rem;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
-    background-size: cover;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .hero h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2.5rem;
     opacity: 0.9;
-    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -139,36 +117,18 @@ body {
     flex-wrap: wrap;
 }
 
-/* Botones mejorados */
+/* Botones */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-block;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
+    text-align: center;
 }
 
 .btn-primary {
@@ -179,7 +139,6 @@ body {
 .btn-primary:hover {
     background: #d97706;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
 }
 
 .btn-secondary {
@@ -191,12 +150,10 @@ body {
 .btn-secondary:hover {
     background: rgba(255,255,255,0.1);
     border-color: rgba(255,255,255,0.5);
-    transform: translateY(-2px);
 }
 
 .btn-full {
     width: 100%;
-    justify-content: center;
 }
 
 /* Features section */
@@ -226,11 +183,10 @@ body {
     box-shadow: var(--shadow);
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid var(--border);
 }
 
 .feature-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -242,7 +198,6 @@ body {
 
 .feature-card p {
     color: var(--text-light);
-    line-height: 1.6;
 }
 
 /* Footer */
@@ -251,10 +206,5 @@ body {
     color: white;
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: auto;
 }
-
-/* Utilidades */
-.text-center { text-align: center; }
-.mt-2 { margin-top: 2rem; }
-.mb-2 { margin-bottom: 2rem; }
