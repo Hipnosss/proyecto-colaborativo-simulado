@@ -4,113 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil - Proyecto Colaborativo</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8fafc;
-            color: #334155;
-            line-height: 1.6;
-        }
-        .profile-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .profile-header {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .profile-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: white;
-            font-weight: bold;
-        }
-        .profile-name {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-        }
-        .profile-title {
-            color: #64748b;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-        .profile-section {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
-        }
-        .profile-section h3 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .skill-tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <div class="profile-container">
-        <div class="profile-header">
-            <div class="profile-avatar">AH</div>
-            <h1 class="profile-name">Angie Gabriela Hernandez Martinez</h1>
-            <p class="profile-title">Estudiante de Sistemas - Curso SGS</p>
-            <p>📍 Bogotá, Colombia</p>
-        </div>
-
-        <div class="profile-section">
-            <h3>📚 Información Académica</h3>
-            <p><strong>Curso Actual:</strong> Sistemas de Gestión (SGS)</p>
-            <p><strong>Estado:</strong> En progreso</p>
-            <p><strong>Especialidad:</strong> Desarrollo de Software</p>
-        </div>
-
-        <div class="profile-section">
-            <h3>💻 Habilidades Técnicas</h3>
-            <div class="skills-container">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">GitHub</span>
-            </div>
-        </div>
-
-        <div class="profile-section">
-            <h3>🎯 Objetivos Profesionales</h3>
-            <ul>
-                <li>Convertirme en desarrolladora Full Stack</li>
-                <li>Dominar Git y trabajo colaborativo</li>
-                <li>Contribuir a proyectos open source</li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">ProyectoSGS</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="profile.html" class="nav-link active">Perfil</a></li>
             </ul>
         </div>
-    </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">AH</div>
+                <div class="profile-info">
+                    <h1>Angie Gabriela Hernandez Martinez</h1>
+                    <p class="profile-title">Estudiante de Sistemas - Curso SGS</p>
+                    <p class="profile-location">📍 Bogotá, Colombia</p>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h3>📚 Información Académica</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Curso Actual:</strong>
+                            <span>Sistemas de Gestión (SGS)</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Estado:</strong>
+                            <span class="status-active">En progreso</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Especialidad:</strong>
+                            <span>Desarrollo de Software</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>💻 Habilidades Técnicas</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>🎯 Objetivos Profesionales</h3>
+                    <ul class="goals-list">
+                        <li>Convertirme en desarrolladora Full Stack</li>
+                        <li>Dominar Git y trabajo colaborativo</li>
+                        <li>Contribuir a proyectos open source</li>
+                        <li>Especializarme en desarrollo web moderno</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Proyecto Colaborativo. Desarrollado por Angie Hernandez</p>
+    </footer>
+
+    <script src="profile.js"></script>
 </body>
 </html>
