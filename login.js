@@ -1,6 +1,6 @@
 // login.js - Validación del formulario de login
 document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.querySelector('form');
+    const loginForm = document.getElementById('loginForm');
     
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
